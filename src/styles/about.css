@@ -6,7 +6,8 @@
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
-  margin-top: 50px;
+  margin: 0;
+  width: 99vw;
 }
 
 .about-content {
@@ -25,17 +26,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
 }
 
 .about-content h2 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
+  padding-left: 40px;
 }
 
 .about-content p {
   font-size: 16px;
+  padding-left: 40px;
+  width: 70%;
 }
 
 /* Media Query for Responsive Design */

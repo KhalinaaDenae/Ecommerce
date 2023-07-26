@@ -15,6 +15,7 @@ import {
 import { useDispatch } from "react-redux";
 import { useGetProductDetailsQuery } from "../slices/productApiSlice";
 import { addToCart } from "../slices/cartSlice";
+// import "../assets/bootstrap.custom.css";
 
 function ProductScreen() {
   const { id: productId } = useParams();

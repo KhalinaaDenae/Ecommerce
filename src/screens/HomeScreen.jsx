@@ -1,8 +1,7 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
 import { useGetProductsQuery } from "../slices/productApiSlice";
-
+import "../styles/HomeScreen.css";
 function HomeScreen() {
   const { data, isSuccess, isLoading } = useGetProductsQuery();
 
@@ -15,16 +14,15 @@ function HomeScreen() {
   }
 
   return (
-    <>
-      <h1> Latest Products </h1>
-      <Row>
+    <div className="product-page">
+      <div className="product-grid">
         {data.products.map((product) => (
-          <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+          <div key={product._id} className="product-item">
             <Product product={product} />
-          </Col>
+          </div>
         ))}
-      </Row>
-    </>
+      </div>
+    </div>
   );
 }
 

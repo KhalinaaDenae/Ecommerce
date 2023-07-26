@@ -1,24 +1,21 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import "../styles/product.css";
 function Product({ product }) {
   return (
-    <Card className="my-3 p-3 rounded">
+    <div className="product-card">
       <Link to={`/product/${product._id}`}>
-        <Card.Img src={product.image} variant="top" />
+        <img className="product-image" src={product.image} alt={product.name} />
       </Link>
 
-      <Card.Body>
+      <div className="product-details">
         <Link to={`/product/${product._id}`}>
-          <Card.Title as="div">
-            <strong> {product.name}</strong>
-          </Card.Title>
+          <h2 className="product-name">{product.name}</h2>
         </Link>
 
-        <Card.Text as="h3">${product.price}</Card.Text>
-      </Card.Body>
-    </Card>
+        <h3 className="product-price">${product.price}</h3>
+      </div>
+    </div>
   );
 }
 
