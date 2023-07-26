@@ -1,0 +1,46 @@
+.about {
+  position: relative;
+  height: 700px; /* Adjust the height as needed */
+  background-image: url("../image/bg.png"); /* Replace 'your-image.jpg' with the actual image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.about-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%; /* Adjust the width as needed for the text overlay */
+  height: 100%;
+  background-color: rgba(
+    89,
+    30,
+    6,
+    0.5
+  ); /* Replace with your desired color and opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  font-size: 16px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    width: 100%;
+  }
+}

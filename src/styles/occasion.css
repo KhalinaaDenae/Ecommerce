@@ -1,0 +1,61 @@
+.occasion {
+  text-align: center;
+  padding: 20px;
+}
+
+.occasion-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.occasion h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.occasion p {
+  font-size: 16px;
+}
+
+.occasion-section {
+  margin-top: 40px;
+}
+
+.occasion-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image-row img {
+  max-width: 30%;
+  height: auto;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .occasion h2 {
+    font-size: 24px;
+  }
+
+  .occasion p {
+    font-size: 14px;
+  }
+
+  .occasion-section h3 {
+    font-size: 20px;
+  }
+
+  .image-row img {
+    max-width: 45%;
+  }
+}
