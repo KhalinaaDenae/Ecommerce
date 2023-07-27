@@ -10,7 +10,7 @@ import {
   useCreateProductMutation,
 } from "../../slices/productApiSlice";
 import { toast } from "react-toastify";
-
+import "../../styles/adminProductlist.css";
 const ProductListScreen = () => {
   const { pageNumber } = useParams();
 
@@ -47,13 +47,13 @@ const ProductListScreen = () => {
   };
 
   return (
-    <>
-      <Row className="align-items-center">
+    <div className="productListCtnr">
+      <Row className="align-items-center  product-list-containe">
         <Col>
-          <h1>Products</h1>
+          <h1 className="product-list-heading">Products</h1>
         </Col>
         <Col className="text-end">
-          <Button className="my-3" onClick={createProductHandler}>
+          <Button className="my-3 create-btn" onClick={createProductHandler}>
             <FaPlus /> Create Product
           </Button>
         </Col>
@@ -67,7 +67,13 @@ const ProductListScreen = () => {
         <Message variant="danger">{error.data.message}</Message>
       ) : (
         <>
-          <Table striped bordered hover responsive className="table-sm">
+          <Table
+            striped
+            bordered
+            hover
+            responsive
+            className="table-sm product-table product-list-container"
+          >
             <thead>
               <tr>
                 <th>ID</th>
@@ -86,7 +92,7 @@ const ProductListScreen = () => {
                   <td>${product.price}</td>
                   <td>{product.category}</td>
                   <td>{product.brand}</td>
-                  <td>
+                  <td className="action-btns">
                     <LinkContainer to={`/admin/product/${product._id}/edit`}>
                       <Button variant="light" className="btn-sm mx-2">
                         <FaEdit />
@@ -97,7 +103,7 @@ const ProductListScreen = () => {
                       className="btn-sm"
                       onClick={() => deleteHandler(product._id)}
                     >
-                      <FaTrash style={{ color: "white" }} />
+                      <FaTrash className="trash" style={{ color: "black" }} />
                     </Button>
                   </td>
                 </tr>
@@ -106,7 +112,7 @@ const ProductListScreen = () => {
           </Table>
         </>
       )}
-    </>
+    </div>
   );
 };
 

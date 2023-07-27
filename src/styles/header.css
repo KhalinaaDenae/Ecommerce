@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Marcellus&display=swap");
+
+.navbar-brand {
+  font-family: "Belleza", sans-serif;
+  color: #faf6eb;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-left: 190px;
+}
+.nav-link {
+  font-family: "Belleza", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}

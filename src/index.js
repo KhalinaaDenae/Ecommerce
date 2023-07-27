@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import './styles/custom.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './assets/index.css'
-// import './assets/bootstrap.custom.css'
+import './assets/bootstrap.custom.css'
 import {
   createBrowserRouter,
   createRoutesFromElements,
