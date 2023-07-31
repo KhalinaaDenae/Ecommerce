@@ -1,25 +1,26 @@
 .productListCtnr {
   background-color: #faf6eb;
   font-family: "Marcellus", serif;
+  width: 100vw;
+  padding: 100px;
 }
 /* Container styles */
 .product-list-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 
   border: 2px solid #4c4c3c;
   border-radius: 5px;
 }
-
-.product-list-containe {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 20px;
-  border: 2px solid #4c4c3c;
-  border-radius: 5px;
+.ctnr {
+  width: 100vw;
+  background-color: #4c4c3c;
 }
+.trash {
+  background: transparent;
+  border: transparent;
+}
+
 /* Heading styles */
 .product-list-heading {
   font-size: 32px;
@@ -29,7 +30,7 @@
 
 /* Create button styles */
 .create-btn {
-  background-color: #4c4c3caa;
+  background-color: #d0c7bf;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -83,5 +84,9 @@
   }
   .product-list-container {
     max-width: 500px;
+    margin: 20px;
+  }
+  .productListCtnr {
+    padding: 0;
   }
 }

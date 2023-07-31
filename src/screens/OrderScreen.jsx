@@ -99,8 +99,8 @@ const OrderScreen = () => {
     <Message variant="danger">{error.data.message}</Message>
   ) : (
     <>
-      <h1>Order {order._id}</h1>
-      <Row>
+      <h1 className="ms-3 mt-5">Order {order._id}</h1>
+      <Row className="ms-3 mt-5">
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
@@ -157,7 +157,7 @@ const OrderScreen = () => {
                             rounded
                           />
                         </Col>
-                        <Col>
+                        <Col className="ms-3">
                           <Link to={`/product/${item.product}`}>
                             {item.name}
                           </Link>
@@ -174,7 +174,7 @@ const OrderScreen = () => {
           </ListGroup>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className="m-3">
             <ListGroup variant="flush">
               <ListGroup.Item>
                 <h2>Order Summary</h2>

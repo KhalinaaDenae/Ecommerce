@@ -7,7 +7,7 @@ function Footer() {
     <div>
       <div className="footer-ctnr">
         <SocialMedia />
-        <hr />
+
         <footer className="footer">
           <div className="footer-column">
             <p>SHOP</p>

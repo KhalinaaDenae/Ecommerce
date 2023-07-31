@@ -25,7 +25,7 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
         )}
       </Nav.Item>
 
-      <Nav.Item>
+      <Nav.Item className="mb-5">
         {step3 ? (
           <LinkContainer to="/payment">
             <Nav.Link>Payment</Nav.Link>

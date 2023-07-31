@@ -46,7 +46,7 @@ const PlaceOrderScreen = () => {
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
-      <Row>
+      <Row className="m-5">
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
@@ -82,7 +82,7 @@ const PlaceOrderScreen = () => {
                             rounded
                           />
                         </Col>
-                        <Col>
+                        <Col className="ms-5">
                           <Link to={`/product/${item.product}`}>
                             {item.name}
                           </Link>
@@ -99,7 +99,7 @@ const PlaceOrderScreen = () => {
           </ListGroup>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className="ms-5">
             <ListGroup variant="flush">
               <ListGroup.Item>
                 <h2>Order Summary</h2>
@@ -136,7 +136,7 @@ const PlaceOrderScreen = () => {
               <ListGroup.Item>
                 <Button
                   type="button"
-                  className="btn-block"
+                  className="blue"
                   disabled={cart.cartItems === 0}
                   onClick={placeOrderHandler}
                 >

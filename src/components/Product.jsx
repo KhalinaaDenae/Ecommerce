@@ -10,7 +10,7 @@ function Product({ product }) {
 
       <div className="product-details">
         <Link to={`/product/${product._id}`}>
-          <h2 className="product-name">{product.name}</h2>
+          <h6 className="product-name">{product.name}</h6>
         </Link>
 
         <h3 className="product-price">${product.price}</h3>

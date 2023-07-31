@@ -3,6 +3,11 @@
   border-radius: 8px;
   background-color: transparent;
 }
+.product-name {
+  color: #faf6eb;
+  padding: 0;
+  margin: 0;
+}
 
 /* Styling for the product image */
 .product-image {
@@ -10,8 +15,8 @@
   height: auto;
 
   /* Set initial image size for large viewports */
-  width: 350px;
-  height: 550px;
+  width: 300px;
+  height: 450px;
 
   /* On medium devices, adjust image size */
   @media (max-width: 1000px) {
@@ -38,7 +43,7 @@
   font-size: 18px;
   font-weight: bold;
   text-decoration: none; /* Removing text decoration */
-  color: #333; /* Set the color of the product name */
+
   text-align: left; /* Left align the product name */
 }
 
@@ -46,5 +51,8 @@
 .product-price {
   font-size: 16px;
   font-weight: bold;
+  color: #faf6eb;
+  padding: 0;
+  margin-bottom: 10px;
   text-align: left; /* Left align the product price */
 }

@@ -23,6 +23,11 @@
 
 .footer p {
   margin: 5px;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: #333;
+}
+@media (max-width: 868px) {
+  .footer p {
+    font-size: 1rem;
+  }
 }

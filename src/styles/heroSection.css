@@ -32,19 +32,25 @@ h1 {
 }
 .cosmic {
   color: black;
+  font-size: 3rem;
 }
 .hero-img {
   width: 100%;
-  height: 85vh;
+  height: 95vh;
   display: block;
 }
-
+.hero-btn {
+  font-size: 2rem;
+}
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+a {
+  text-decoration: none;
 }
 
 /* CSS for smaller screens (e.g., mobile) */
@@ -53,7 +59,22 @@ h1 {
     height: 100vh; /* Change to 100vh to take up the full viewport height */
     width: 100vw;
   }
-
+  h1 {
+    font-size: 1.5rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+  .cosmic {
+    font-size: 1.7rem;
+  }
+  .hero-img {
+    height: 70vh;
+  }
+  .cosmic-img {
+    height: 50vh;
+  }
   .one {
     display: none; /* Hide the .one image on smaller screens */
   }

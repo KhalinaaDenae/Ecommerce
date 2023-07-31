@@ -7,14 +7,14 @@ function NewCollection() {
   return (
     <div className="hero-container">
       <div className="image-container">
-        <img className="hero-img" src={heroImage1} alt="Hero 1" />
+        <img className="hero-img cosmic-img" src={heroImage1} alt="Hero 1" />
       </div>
       <div className="image-container">
         <img className="hero-img one" src={heroImage2} alt="Hero 2" />
       </div>
       <div className="hero-content">
-        <h1 className="cosmic"> New Cosmic Sets</h1>
-        <button className="hero-btn"> Shop Now </button>
+        <h1 className="cosmic"> New Linen Sets</h1>
+        <button className="hero-btn cosmic-btn"> Shop Now </button>
       </div>
     </div>
   );

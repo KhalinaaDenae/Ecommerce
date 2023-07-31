@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/custom.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './assets/index.css'
+// import './assets/index.css'
 import './assets/bootstrap.custom.css'
 import {
   createBrowserRouter,
@@ -36,15 +36,17 @@ import ProductEditScreen from './screens/admin/ProductEditScreen';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-       <Route path='/' element={<App />}>
-            <Route path='/register' element={<RegisterScreen />} />
-            <Route path='/landingpage' element={<LandingPage />} />
-           <Route index={true} path='/' element={<HomeScreen />} />
-           <Route path='/product/:id' element={<ProductScreen />} />
-           <Route path='/cart' element={<CartScreen />} />
-           <Route path='/login' element={<LoginScreen />} />
-          <Route path='/register' element={<RegisterScreen />} />
-  
+      
+
+    <Route path="/" element={<App />}>
+    <Route index={true} path="/" element={<LandingPage />} />
+    <Route path="/landingpage" element={<LandingPage />} />
+    <Route path="/shop" element={<HomeScreen />} />
+    <Route path="/product/:id" element={<ProductScreen />} />
+    <Route path="/cart" element={<CartScreen />} />
+    <Route path="/login" element={<LoginScreen />} />
+    <Route path="/register" element={<RegisterScreen />} />
+    
 {/* registered users  */}
           <Route path='' element={<PrivateRoute />}>
               <Route path='/shipping' element={<ShippingScreen />} />

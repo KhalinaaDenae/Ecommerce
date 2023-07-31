@@ -3,16 +3,32 @@
 .navbar-brand {
   font-family: "Belleza", sans-serif;
   color: #faf6eb;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   padding-left: 190px;
 }
 .nav-link {
   font-family: "Belleza", sans-serif;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 .nav-link:hover {
   text-decoration: underline;
   font-weight: bolder;
+}
+.navbar {
+  max-height: 7vh;
+  padding: 20px 0;
+}
+
+@media (max-width: 1068px) {
+  .navbar {
+    max-height: 12vh;
+  }
+}
+
+@media (max-width: 868px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
 }

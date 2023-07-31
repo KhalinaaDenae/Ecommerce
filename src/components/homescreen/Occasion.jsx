@@ -36,7 +36,7 @@ function Occassions() {
           />
           <img
             src={require("../../image/wedding3.png")}
-            className="none occasion-img"
+            className="none occasion-img noneee"
             alt="Category 5"
           />
           <img
@@ -63,7 +63,7 @@ function Occassions() {
           />
           <img
             src={require("../../image/beachh.png")}
-            className="none occasion-img"
+            className="none occasion-img noneee"
             alt="Category 5"
           />
           <img
@@ -102,12 +102,12 @@ function Occassions() {
           />
           <img
             src={require("../../image/resort3.png")}
-            className="none occasion-img"
+            className="none occasion-img noneee"
             alt="Category 5"
           />
           <img
             src={require("../../image/bestSeller.png")}
-            className="none occasion-img"
+            className="none occasion-img nonee"
             alt="Category 5"
           />
         </div>

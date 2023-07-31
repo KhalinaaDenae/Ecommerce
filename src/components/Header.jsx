@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container, NavDropdown, Badge } from "react-bootstrap";
-// import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBag, faUser } from "@fortawesome/free-solid-svg-icons";
 import { LinkContainer } from "react-router-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -43,13 +44,13 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <LinkContainer to="/">
-                <Nav.Link>Shop </Nav.Link>
+              <LinkContainer to="/shop">
+                <Nav.Link>Shop</Nav.Link>
               </LinkContainer>
 
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  Cart
+                  <FontAwesomeIcon icon={faShoppingBag} />
                   {cartItems.length > 0 && (
                     <Badge pill bg="success" style={{ marginLeft: "5px" }}>
                       {cartItems.reduce((a, c) => a + c.qty, 0)}
@@ -70,7 +71,9 @@ const Header = () => {
                 </>
               ) : (
                 <LinkContainer to="/login">
-                  <Nav.Link>Account</Nav.Link>
+                  <Nav.Link>
+                    <FontAwesomeIcon icon={faUser} />
+                  </Nav.Link>
                 </LinkContainer>
               )}
 
