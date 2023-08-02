@@ -9,6 +9,7 @@ import Loader from "../components/Loader";
 import { useProfileMutation } from "../slices/usersApiSlice";
 import { useGetMyOrdersQuery } from "../slices/ordersApiSlice";
 import { setCredentials } from "../slices/authSlice";
+import "../styles/adminprofileScreen.css";
 
 const ProfileScreen = () => {
   const [name, setName] = useState("");
@@ -50,8 +51,8 @@ const ProfileScreen = () => {
   };
 
   return (
-    <Row>
-      <Col md={3}>
+    <Row className="admin-user-ctnr">
+      <Col md={3} className="user-form">
         <h2>User Profile</h2>
 
         <Form onSubmit={submitHandler}>
@@ -95,13 +96,13 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Button type="submit" variant="primary">
+          <Button type="submit" className="blue">
             Update
           </Button>
           {loadingUpdateProfile && <Loader />}
         </Form>
       </Col>
-      <Col md={9}>
+      <Col className="order-form" md={9}>
         <h2>My Orders</h2>
         {isLoading ? (
           <Loader />
@@ -143,7 +144,7 @@ const ProfileScreen = () => {
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
-                      <Button className="btn-sm" variant="light">
+                      <Button className="blue" variant="light">
                         Details
                       </Button>
                     </LinkContainer>

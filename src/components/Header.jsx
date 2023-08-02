@@ -9,8 +9,9 @@ import { logout } from "../slices/authSlice";
 // import SearchBox from './SearchBox';
 // import logo from '../assets/logo.png';
 // import { resetCart } from '../slices/cartSlice';
-import "../assets/bootstrap.custom.css";
 import "../styles/header.css";
+import "../assets/bootstrap.custom.css";
+
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
@@ -35,7 +36,13 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar bg="secondary" variant="dark" expand="lg" collapseOnSelect>
+      <Navbar
+        bg="secondary"
+        variant="dark"
+        expand="lg"
+        className="navbar-ctnr"
+        collapseOnSelect
+      >
         <Container>
           <LinkContainer to="/landingpage">
             <Navbar.Brand> Pura Vida </Navbar.Brand>
@@ -50,7 +57,7 @@ const Header = () => {
 
               <LinkContainer to="/cart">
                 <Nav.Link>
-                  <FontAwesomeIcon icon={faShoppingBag} />
+                  Cart <FontAwesomeIcon icon={faShoppingBag} />
                   {cartItems.length > 0 && (
                     <Badge pill bg="success" style={{ marginLeft: "5px" }}>
                       {cartItems.reduce((a, c) => a + c.qty, 0)}
@@ -79,16 +86,16 @@ const Header = () => {
 
               {/* Admin Links */}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown title="Admin" id="adminmenu">
+                <NavDropdown className="dropdown" title="Admin" id="adminmenu">
                   <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>Products</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/admin/orderlist">
                     <NavDropdown.Item>Orders</NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to="/admin/userlist">
+                  {/* <LinkContainer to="/admin/userlist">
                     <NavDropdown.Item>Users</NavDropdown.Item>
-                  </LinkContainer>
+                  </LinkContainer> */}
                 </NavDropdown>
               )}
             </Nav>

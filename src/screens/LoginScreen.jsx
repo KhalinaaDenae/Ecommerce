@@ -8,6 +8,7 @@ import FormContainer from "../components/FormContainer";
 import { useLoginMutation } from "../slices/usersApiSlice";
 import { setCredentials } from "../slices/authSlice";
 import { toast } from "react-toastify";
+import "../styles/login.css";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -43,9 +44,8 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
-
-      <Form onSubmit={submitHandler}>
+      <Form onSubmit={submitHandler} className="user-form">
+        <h1>Sign In</h1>
         <Form.Group className="my-2" controlId="email">
           <Form.Label>Email Address</Form.Label>
           <Form.Control
@@ -66,7 +66,7 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button disabled={isLoading} type="submit" variant="primary">
+        <Button disabled={isLoading} type="submit" variant="secondary">
           Sign In
         </Button>
 
